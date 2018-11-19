@@ -4,7 +4,7 @@
   "description": "This project is a simple nodejs api with jwt authentiction and basic crud functionality",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tirthankar Dey @tirthankar.dey23@gmail.com",
