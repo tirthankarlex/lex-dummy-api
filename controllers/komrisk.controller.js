@@ -1,6 +1,8 @@
 const authURL = async function(req, res){
 	var acceptedUrls = ["192.168.0.102", "komrisk-dummy-api.herokuapp.com"];
 	var authMap = {};
+	console.log(req.body.Url);
+	console.log(acceptedUrls.indexOf(req.body.Url));
 	if(acceptedUrls.indexOf(req.body.Url) >= 0) {
 		authMap['status'] = 'SUCCESS';
 		res.statusCode = 200;

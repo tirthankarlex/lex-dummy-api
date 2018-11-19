@@ -1,5 +1,4 @@
 let authenticateApiKey = async function (req, res, next) {
-	console.log(req.headers);
 	var apiKey = req.headers['api-key'];
 	var authMap = {status: 'UNAUTHORISED_TO_USE_THIS_SERVICE'};
 	if(apiKey == '1d339a8918bfd92522267f0dd76415f8') {
