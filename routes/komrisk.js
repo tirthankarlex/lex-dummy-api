@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
+// const passport = require('passport');
 
 const KomriskController = require('../controllers/komrisk.controller');
 
-require('./../middleware/passport')(passport)
+// require('./../middleware/passport')(passport)
 
 const komriskAuth = require('./../middleware/komrisk-auth');
 
