@@ -3,7 +3,7 @@ const authURL = async function(req, res){
 	var authMap = {};
 	console.log(req.body.Url);
 	console.log(acceptedUrls.indexOf(req.body.Url.split("//")[1]));
-	if(acceptedUrls.indexOf(req.body.Url) >= 0) {
+	if(acceptedUrls.indexOf(req.body.Url.split("//")[1]) >= 0) {
 		authMap['status'] = 'SUCCESS';
 		res.statusCode = 200;
 	} else {
