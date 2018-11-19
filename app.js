@@ -9,7 +9,6 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-const routes = require('./routes/routes');
 const komriskRoutes = require('./routes/komrisk');
 
 var app = express();
