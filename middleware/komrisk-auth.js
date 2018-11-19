@@ -4,7 +4,7 @@ let authenticateApiKey = async function (req, res, next) {
 	if(apiKey == '1d339a8918bfd92522267f0dd76415f8') {
 		next();
 	} else {
-		res.statusCode = 401
+		res.statusCode = 401;
 		res.json(authMap);
 	}
 }
