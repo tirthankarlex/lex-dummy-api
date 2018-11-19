@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 
 const routes = require('./routes/routes');
+const komriskRoutes = require('./routes/komrisk');
 
 var app = express();
 // app.use(cors());
@@ -17,7 +18,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/v1', routes);
+// app.use('/v1', routes);
+app.use('/komrisk/api', komriskRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
