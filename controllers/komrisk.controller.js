@@ -43,6 +43,37 @@ const login = async function(req, res) {
 }
 module.exports.login = login;
 
+const userAccessDetails = async function(req, res) {
+	console.log("CALLED");
+	var dataMap = {
+		countryEnabled: true,
+		complianceViewAs: [
+			{key: 'COMPANY HEAD', value: 'COMPANY EXECUTIVE'},
+			{key: 'ESCALATION POINT', value: 'ESCALATION POINT'},
+			{key: 'REVIEW', value: 'REVIEW'},
+			{key: 'OWNER', value: 'OWNER'}
+		],
+		countryList: [
+			[1, 'India'],
+			[2, 'UAE'],
+			[3, 'Bangladesh'],
+			[4, 'Egypt']
+		],
+		entityView: {
+			entityEnabled: true,
+			entityName: 'View By Entity ',
+			options: [
+				{entity_name: 'Entity', id: 1},
+				{entity_name: 'Entity2', id: 2},
+				{entity_name: 'Entity3', id: 3}
+			]
+		}
+	}
+
+	return res.json(dataMap);
+}
+module.exports.userAccessDetails = userAccessDetails;
+
 const compStatus = async function(req, res) {
 	var dataMap = {
 		title: "Compliance Status",
