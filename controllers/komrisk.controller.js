@@ -17,21 +17,26 @@ module.exports.authURL = authURL;
 
 const login = async function(req, res) {
 	var authMap = {
-		contryEnabled: true,
-		status: 'SUCCESS',
-		token: "eyJhbGciOiJIUzI1NiJ9.eyJpc3N1ZXIiOiJodHRwczpcL1wvd3d3LmtvbXJpc2suY29tIiwiZXhwaXJhdGlvblRpbWUiOjE1NDM0ODc5MzksInVzZXJJZCI6MjZ9.lY2Tl6blZbVKcbDI53R-MZ9rYrAUsnJRE-g0Tw5Dvfw",
-		userDetails: {
-			company: "Lexplosion Solutions Pvt. Ltd.",
-			department: "IT",
-			displayName: "Tirthankar Dey",
-			firstName: "Tirthankar",
-			lastName: "Dey",
-			mobile: "9836776023",
-			operatingUnit: "Kolkata",
-			phone: "9836776023",
-			role: "Company Admin",
-			username: req.body.username
-		}
+	  status: 'SUCCESS',
+	  token: 'eyJhbGciOiJIUzI1NiJ9.eyJpc3N1ZXIiOiJodHRwczpcL1wvd3d3LmtvbXJpc2suY29tIiwiZXhwaXJhdGlvblRpbWUiOjE1NDM0ODc5MzksInVzZXJJZCI6MjZ9.lY2Tl6blZbVKcbDI53R-MZ9rYrAUsnJRE-g0Tw5Dvfw',
+	  userDetails: {
+	    userId: 26,
+	    username: 'tirthankar.dey@lexplosion.in',
+	    firstName: 'Tirthankar',
+	    lastName: 'Dey',
+	    displayName: 'Tirthankar Dey',
+	    phone: '41255850',
+	    mobile: '8420358610',
+	    role: 'Company Admin',
+	    company: 'IQSS Test Company',
+	    operatingUnit: 'Bangalore Development Centre',
+	    department: 'Facilitation',
+	    wipEnabled: true,
+	    actualDateCompletionAllowed: false,
+	    requestReassignmentAllowed: true,
+	    uploadLink: false
+	  },
+	  countryEnabled: true
 	};
 
 	if(req.body.password == '1234') {
