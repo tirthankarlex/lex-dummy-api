@@ -18,4 +18,18 @@ router.post('/complianceReports/impactAnalysisData', komriskAuth.authenticateApi
 router.post('/incidentReports/activityStatusData', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.incActStatus);
 router.post('/incidentReports/comparisonData', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.incStatus);
 
+router.post('/complianceReports/comparisonDataList', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.compStatusDataList);
+router.post('/complianceReports/activityStatusDataList', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.compActStatusDataList);
+router.post('/complianceReports/impactAnalysisDataList', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.impactAnalysisDataList);
+router.post('/incidentReports/activityStatusDataList', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.incActStatusDataList);
+router.post('/incidentReports/comparisonDataList', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.incStatusDataList);
+
+router.post('/complianceAlerts/list', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.compAlertList);
+router.post('/compliances/details', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.compDetails);
+router.post('/complianceAlerts/updateStatus', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.updateCompAlertStatus);
+
+router.post('/complianceTasks/uploadProofs', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.uploadTaskProofs);
+
+
+
 module.exports = router;
