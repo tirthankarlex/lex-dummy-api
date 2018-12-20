@@ -1,3 +1,9 @@
+/* 
+	------------------------------
+	AUTHENTICATIONS & USER DETAILS
+	------------------------------ 
+*/
+
 const authURL = async function(req, res){
 	var acceptedUrls = ["http://192.168.0.102", "komrisk-dummy-api.herokuapp.com"];
 	var authMap = {};
@@ -78,6 +84,12 @@ const userAccessDetails = async function(req, res) {
 	return res.json(dataMap);
 }
 module.exports.userAccessDetails = userAccessDetails;
+
+/* 
+	------------------------------
+	REPORT DATA
+	------------------------------
+*/
 
 const compStatus = async function(req, res) {
 	var dataMap = {
@@ -261,6 +273,11 @@ const incStatus = async function(req, res) {
 }
 module.exports.incStatus = incStatus;
 
+/* 
+	------------------------------
+	REPORT DATA LIST
+	------------------------------
+*/
 const compStatusDataList = async function(req, res) {
 	var dataMap = {
 	  sEcho: null,
@@ -1018,6 +1035,12 @@ const incStatusDataList = async function(req, res) {
 }
 module.exports.incStatusDataList = incStatusDataList;
 
+/* 
+	------------------------------
+	COMPLIANCE ALERTS
+	------------------------------
+*/
+
 const compAlertList = async function(req, res) {
 	var dataMap = {
 	  sEcho: null,
@@ -1186,6 +1209,57 @@ const updateCompAlertStatus = async function(req, res) {
 	return res.json(dataMap);
 }
 module.exports.updateCompAlertStatus = updateCompAlertStatus;
+
+/* 
+	------------------------------
+	TASK
+	------------------------------
+*/
+
+const taskMapDetails = async function(req, res) {
+	var dataMap = {
+	  mapId: 15818,
+	  mapName: 'Authentication of documents by a company Applicable to all companies',
+	  mapDesc: ' What is to be done ? Ensure to authenticate documents or proceedings. When is it to be done ? On an ongoing basis. How is it to be done ? Have a process in place for proper authentication of documents or proceedings. Check below for details. When documents or proceedings need to be authenticated by the company, then ensure that such document or proceeding is signed by key managerial personnel or an officer of the company duly authorized by the B oard. ',
+	  operatingUnit: 'Kolkata Delivery Center',
+	  department: 'I.T',
+	  owner: 'Tirthankar Dey',
+	  approver: 'Shantanu Das',
+	  dueDate: '10/12/2016',
+	  frequency: 'Daily',
+	  requiresProof: false,
+	  alertBeforeDue: 15,
+	  failureImpact: 'High',
+	  recurringYear: null,
+	  reminderFrequency: null,
+	  operatingUnitId: 5,
+	  userMapRole: 'owner',
+	  info: 'success'
+	};
+
+	return res.json(dataMap);
+}
+module.exports.taskMapDetails = taskMapDetails;
+
+const incidentMapDetails = async function(req, res) {
+	var dataMap = {
+	  mapId: 1,
+	  name: 'Reply Notice',
+	  description: 'Reply to the notice recieved',
+	  owner: 7,
+	  ownerDisp: 'Tarun Pandey',
+	  reviewer: 5,
+	  reviewerDisp: 'Shiv Dubey',
+	  response: '30/03/2012',
+	  requiresProof: false,
+	  info: 'success',
+	  mapStarted: 'started',
+	  userMapRole: 'others'
+	};
+
+	return res.json(dataMap);
+}
+module.exports.incidentMapDetails = incidentMapDetails;
 
 const uploadTaskProofs = async function(req, res) {
 	var dataMap = {
