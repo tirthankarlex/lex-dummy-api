@@ -3,6 +3,7 @@
 	AUTHENTICATIONS & USER DETAILS
 	------------------------------ 
 */
+const path = require('path');
 
 const authURL = async function(req, res){
 	var acceptedUrls = ["http://192.168.0.102", "komrisk-dummy-api.herokuapp.com"];
@@ -1271,7 +1272,7 @@ const uploadTaskProofs = async function(req, res) {
 module.exports.uploadTaskProofs = uploadTaskProofs;
 
 const oauthRedirect =  async function(req, res) {
-	var username = encodeURI("tirthankar.dey@lexplosion.in");
-	res.redirect("in.lexplosion.komriskapp:/login?uname="+username);
+	console.log("here "+path.join(__dirname, '../views/oauth.html'));
+	res.sendFile(path.join(__dirname, '../views/oauth.html'));
 }
 module.exports.oauthRedirect = oauthRedirect;

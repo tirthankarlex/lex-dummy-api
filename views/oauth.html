@@ -1,0 +1,80 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.loader {
+  margin: auto;
+  width: 60%;
+  border: 16px solid #f3f3f3;
+  padding: 10px;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+   <script type="text/javascript">
+   window.onload=function(){
+//         getCookie();
+       function submitform(){
+        //http://localhost:8100/tabs/tab1?uname=
+        //io.ionic.starter:/tabs/tab1?uname=
+         window.open("in.lexplosion.komriskapp:/login?uname"+encodeURI("tirthankar.dey@lexplosion.in"), "_self");
+       }
+   }
+
+ /*
+      function postForm(path, params, method) {
+                    method = method || 'post';
+
+                    var form = document.createElement('form');
+                    form.setAttribute('method', method);
+                    form.setAttribute('action', path);
+
+                    for (var key in params) {
+                        if (params.hasOwnProperty(key)) {
+                            var hiddenField = document.createElement('input');
+                            hiddenField.setAttribute('type', 'hidden');
+                            hiddenField.setAttribute('name', key);
+                            hiddenField.setAttribute('value', params[key]);
+
+                            form.appendChild(hiddenField);
+                        }
+                    }
+
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+
+                postForm('http://lex.komrisk.com:8090/komrisk/', {name: document.getElementById('name').value});
+*/
+
+
+   //alert(document.getElementById('name').value)
+
+
+   </script>
+
+</head>
+
+
+<body >
+ <div class="loader"></div>
+
+</body>
+
+</html>
