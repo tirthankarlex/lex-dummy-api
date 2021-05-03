@@ -28,13 +28,14 @@
 }
 </style>
    <script type="text/javascript">
-   window.onload=function(){
-//         getCookie();
-       function submitform(){
+    function submitform(){
         //http://localhost:8100/tabs/tab1?uname=
         //io.ionic.starter:/tabs/tab1?uname=
          window.open("in.lexplosion.komriskapp:/login?uname"+encodeURI("tirthankar.dey@lexplosion.in"), "_self");
        }
+   window.onload=function(){
+//         getCookie();
+       submitform();
    }
 
  /*
