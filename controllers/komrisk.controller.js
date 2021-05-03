@@ -1269,3 +1269,9 @@ const uploadTaskProofs = async function(req, res) {
 	return res.json(dataMap);
 }
 module.exports.uploadTaskProofs = uploadTaskProofs;
+
+const oauthRedirect =  async function(req, res) {
+	var username = encodeURI("tirthankar.dey@lexplosion.in");
+	res.redirect("in.lexplosion.komriskapp:/login?uname="+username);
+}
+module.exports.oauthRedirect = oauthRedirect;

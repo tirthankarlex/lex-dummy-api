@@ -32,4 +32,6 @@ router.post('/complianceTasks/mapDetails', komriskAuth.authenticateApiKey, komri
 router.post('/incidentTasks/mapDetails', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.incidentMapDetails);
 router.post('/complianceTasks/uploadProofs', komriskAuth.authenticateApiKey, komriskAuth.authenticateToken, KomriskController.uploadTaskProofs);
 
+router.get('/oauth/redirect', KomriskController.oauthRedirect);
+
 module.exports = router;
